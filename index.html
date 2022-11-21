@@ -1,52 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" media="only screen and (max-width: 767px)" href="css/mobile.css" />
+  <link rel="stylesheet" media="only screen and (max-width: 1023px) and (min-width: 768px)" href="css/tablet.css" />
+  <link rel="stylesheet" media="only screen and (min-width: 1024px)" href="css/desktop.css" />
+
   <title>Frontend Mentor | Skilled e-learning landing page</title>
 </head>
+
 <body>
+  <!-- nav bar -->
+  <nav>
+    <span>skilled</span>
+    <a href="#"> Get Started</a>
+  </nav>
 
-  Get Started
+  <!-- header -->
+  <header>
+    <h1>Maximize skill, minimize budget</h1>
 
-  Maximize skill, minimize budget
+    <p>
+      Our modern courses across a range of <br />in-demand skills will give you the
+      knowledge <br />you need to live the life you want.
+    </p>
 
-  Our modern courses across a range of in-demand skills will give you the 
-  knowledge you need to live the life you want.
+    <!-- Primary CTA -->
+    <a href="#"> Get Started</a>
 
-  Get Started
+    <!-- hero image -->
+    <picture>
 
-  Check out our most popular courses!
+      <!-- desktop -->
+      <source media="(min-width: 1024px)"
+        srcset=" ./assets/images/image-hero-desktop@2x.webp 2x, ./assets/images/image-hero-desktop.webp"
+        type="image/webp">
+      <source media="(min-width: 1024px)"
+        srcset=" ./assets/images/image-hero-desktop@2x.png 2x, ./assets/images/image-hero-desktop.png" type="image/png">
 
-  Animation
-  Learn the latest animation techniques to create stunning motion 
-  design and captivate your audience.
-  Get Started
+      <!-- tablet -->
+      <source media="(max-width: 1023px) and (min-width: 768px)"
+        srcset=" ./assets/images/image-hero-tablet@2x.webp 2x, ./assets/images/image-hero-tablet.webp"
+        type="image/webp">
+      <source media="(max-width: 1023px) and (min-width: 768px)"
+        srcset=" ./assets/images/image-hero-tablet@2x.png 2x, ./assets/images/image-hero-tablet.png" type="image/png">
 
-  Design
-  Create beautiful, usable interfaces to help shape the future of 
-  how the web looks.
-  Get Started
+      <!-- mobile -->
+      <source media="(max-width: 767px)"
+        srcset=" ./assets/images/image-hero-mobile@2x.webp 2x, ./assets/images/image-hero-mobile.webp"
+        type="image/webp">
+      <source media="(max-width: 767px)"
+        srcset=" ./assets/images/image-hero-mobile@2x.png 2x, ./assets/images/image-hero-mobile.png" type="image/png">
 
-  Photography
-  Explore critical fundamentals like lighting, composition, and focus 
-  to capture exceptional photos.
-  Get Started
 
-  Crypto
-  All you need to know to get started investing in crypto. Go from beginner 
-  to advanced with this 54 hour course.
-  Get Started
+      <img src="./assets/images/image-hero-mobile.png" alt="hero-image"
+        sizes="(min-width: 1024px) 991.63px, (max-width: 1023px) 640px, 327px">
+    </picture>
+  </header>
 
-  Business
-  A step-by-step playbook to help you start, scale, and sustain your business 
-  without outside investment.
-  Get Started
+  <!-- main -->
+  <main>
+    <ul>
+      <!-- li: Call to Action -->
+      <li>
+        <h2>Check out our most popular courses!</h2>
+      </li>
 
-  Get Started
+      <!-- li-feature: Animation -->
+      <li data-icon="animation">
+        <h2>Animation</h2>
+        <p>
+          Learn the latest animation techniques to create stunning motion
+          design and captivate your audience.
+        </p>
 
+        <a href="#"> Get Started</a>
+      </li>
+
+      <!-- li-feature: Design -->
+      <li data-icon="design">
+        <h2>Design</h2>
+
+        <p>
+          Create beautiful, usable interfaces to help shape the &nbsp; future of how
+          the web looks.
+        </p>
+
+        <a href="#"> Get Started</a>
+      </li>
+
+      <!-- li-feature: Photography -->
+      <li data-icon="photography">
+        <h2>Photography</h2>
+
+        <p>
+          Explore critical fundamentals like lighting, composition, and focus
+          to capture exceptional photos.
+        </p>
+
+        <a href="#"> Get Started</a>
+      </li>
+
+      <!-- li-feature: Crypto -->
+      <li data-icon="crypto">
+        <h2>Crypto</h2>
+
+        <p>
+          All you need to know to get started investing in crypto. Go from
+          beginner to advanced with this 54 hour course.
+        </p>
+
+        <a href="#"> Get Started</a>
+      </li>
+
+      <!-- li-feature: Business -->
+      <li data-icon="business">
+        <h2>Business</h2>
+
+        <p>
+          A step-by-step playbook to help you start, scale, and sustain your
+          business without outside investment.
+        </p>
+
+        <a href="#"> Get Started</a>
+      </li>
+    </ul>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <span>skilled</span>
+    <a href="#"> Get Started</a>
+  </footer>
 </body>
+
 </html>

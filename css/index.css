@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+  font-weight: 125 950;
+  font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  appearance: none;
+}
+
+:root {
+  /* Color Names were obtained from https://www.color-name.com/ */
+  --color-dark-blue-grey: #666ca3;
+  --color-yankees-blue: #13183f;
+  --color-roman-silver: #83869a;
+  --color-sasquatch-socks: #f74780;
+  --color-carnation-pink: #ffa7c3;
+  --color-frostbite: #f02aa6;
+  --color-outrageous-orange: #ff6f48;
+  --color-ultramarine-blue: #4851ff;
+  --color-white: #ffffff;
+  --color-translucent-white: #ffffff80;
+  --color-magnolia: #f0f1ff;
+
+  /* gradient colors */
+  --gradient-primary: linear-gradient(180deg,
+      var(--color-outrageous-orange) 0%,
+      var(--color-frostbite) 100%);
+  --gradient-secondary: linear-gradient(180deg,
+      var(--color-ultramarine-blue) 0%,
+      var(--color-frostbite) 100%);
+  --gradient-opacity: linear-gradient(0deg,
+      var(--color-translucent-white),
+      var(--color-translucent-white));
+
+  --logo-width: 120px;
+  --logo-height: 35px;
+
+  --icon-animation: url("../assets/svgs/icon-animation.svg");
+  --icon-design: url("../assets/svgs/icon-design.svg");
+  --icon-photography: url("../assets/svgs/icon-photography.svg");
+  --icon-crypto: url("../assets/svgs/icon-crypto.svg");
+  --icon-business: url("../assets/svgs/icon-business.svg");
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden auto;
+  background-color: var(--color-white);
+  font-family: "Plus Jakarta Sans";
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  appearance: none;
+  font-variation-settings: "wght" 700;
+
+}
+
+nav>a,
+header>a,
+footer>a {
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 26px;
+  display: grid;
+  place-items: center;
+}
+
+
+nav>a {
+  background-color: var(--color-yankees-blue);
+  z-index: 2;
+}
+
+nav>a:hover {
+  background-color: var(--color-dark-blue-grey);
+}
+
+footer>a {
+  background: var(--gradient-secondary);
+}
+
+footer>a:hover {
+  background: var(--gradient-opacity), var(--gradient-secondary);
+}
+
+nav,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav>span,
+footer>span {
+
+  font-variation-settings: 'wght' 800;
+}
+
+nav>span {
+  color: var(--color-yankees-blue);
+}
+
+footer>span {
+  color: var(--color-white);
+}
+
+header>h1,
+main>ul>li:not(:first-of-type)>h2 {
+  color: var(--color-yankees-blue);
+}
+
+header>h1 {
+  font-size: 40px;
+  line-height: 50.4px;
+  font-variation-settings: "wght" 800;
+}
+
+header>p,
+main>ul>li>p {
+  color: var(--color-roman-silver);
+  font-variation-settings: "wght" 500;
+}
+
+header>p>br {
+  display: none;
+}
+
+header>a {
+  width: 167px;
+  height: 56px;
+  background: var(--gradient-primary);
+  border-radius: 31.5px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+header>a:hover {
+  background: var(--gradient-opacity), var(--gradient-primary);
+}
+
+main {
+  background: linear-gradient(180deg,
+      var(--color-white) 0%,
+      var(--color-magnolia) 100%);
+}
+
+[data-icon="animation"]::before {
+  background-image: var(--icon-animation);
+}
+
+[data-icon="design"]::before {
+  background-image: var(--icon-design);
+}
+
+[data-icon="photography"]::before {
+  background-image: var(--icon-photography);
+}
+
+[data-icon="crypto"]::before {
+  background-image: var(--icon-crypto);
+}
+
+[data-icon="business"]::before {
+  background-image: var(--icon-business);
+}
+
+main>ul>li {
+  list-style: none;
+  position: relative;
+}
+
+main>ul>li[data-icon]::before {
+  content: "";
+  width: 56px;
+  height: 56px;
+  display: block;
+  position: absolute;
+  top: -28px;
+  left: 28px;
+}
+
+main>ul>li {
+  background-color: var(--color-white);
+}
+
+main>ul>li:first-of-type {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  font-variation-settings: 'wght' 800;
+
+}
+
+main>ul>li>a {
+  color: var(--color-sasquatch-socks);
+  font-size: 18px;
+  line-height: 28px;
+  font-variation-settings: "wght" 700;
+}
+
+main>ul>li>a:hover {
+  color: var(--color-carnation-pink);
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 16px;
+  background-color: var(--color-yankees-blue);
+}
+
+footer>svg {
+  color: var(--white);
+  fill: currentColor;
+}
